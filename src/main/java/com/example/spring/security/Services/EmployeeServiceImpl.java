@@ -33,4 +33,15 @@ public class EmployeeServiceImpl implements EmployeeServiceInterface {
         return  employeeServiceRepo.findAll();
     }
 
+    @Override
+    public Employee updateEmployeeDetail(Employee emp) {
+        return employeeServiceRepo.saveAndFlush(emp);
+    }
+
+    @Override
+    public String deleteEmployeeDetail(Long id) {
+         employeeServiceRepo.deleteById(id);
+         return "deleted";
+    }
+
 }

@@ -30,4 +30,13 @@ public class EmployeeController {
         Employee e1 =employeeService.saveEmployeeDetail(emp);
         return e1;
     }
+
+    @PutMapping("/update")
+    public Employee updateEmployee(@RequestBody Employee emp) {
+        return employeeService.updateEmployeeDetail(emp);
+    }
+    @DeleteMapping("/delete/{id}")
+    public String deleteEmployee(@PathVariable Long id) {
+        return employeeService.deleteEmployeeDetail(id);
+    }
 }

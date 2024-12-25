@@ -9,4 +9,6 @@ public interface EmployeeServiceInterface {
      Employee saveEmployeeDetail(Employee emp);
      Optional<Employee> getEmployeeDetail(Long id);
      List<Employee> getAllEmployeeDetail();
+     Employee updateEmployeeDetail(Employee emp);
+     String deleteEmployeeDetail(Long id);
 }
