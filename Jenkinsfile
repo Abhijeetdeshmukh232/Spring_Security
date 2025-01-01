@@ -11,16 +11,6 @@ pipeline {
     }
 
     stages {
-        stage('Setup Environment') {
-            steps {
-                echo "Setting up Java and Maven"
-                echo "Using Java version:"
-                sh 'java -version'
-                echo "Using Maven version:"
-                sh 'mvn -version'
-            }
-        }
-
         stage('Checkout Code') {
             steps {
                 git branch: 'main', url: 'https://github.com/Abhijeetdeshmukh232/Spring_Security.git'
